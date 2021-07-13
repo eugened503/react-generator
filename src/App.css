@@ -1,0 +1,41 @@
+.app {
+  padding: 50px;
+  position: relative;
+  min-width: 320px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1243px) {
+  .app {
+    padding: 20px;
+    position: relative;
+  }
+}
+
+.app__number {
+  min-height: 540px;
+  width: 35%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1243px) {
+  .app__number {
+    align-items: center;
+    width: 80%;
+  }
+}
+
+.app__number_background {
+  background-image: url("./images/scale_1200.png");
+  background-size: contain;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  border: none;
+}

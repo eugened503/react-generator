@@ -1,0 +1,143 @@
+.input-container__button {
+  max-width: 501px;
+  min-height: 72px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #008ae8;
+  border-radius: 0 45px 45px 45px;
+  padding-left: 44px;
+  padding-right: 50px;
+  transition: all 0.3s ease-out;
+  border: none;
+  color: #fff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  cursor: pointer;
+}
+
+.input-container__button:hover {
+  transform: scale(1.1);
+}
+
+.input-container__button_visibility {
+  display: none;
+}
+
+.input-container {
+  display: flex;
+  margin: 50px auto 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-height: 200px;
+  width: 50%;
+  left: 40%;
+}
+
+@media screen and (max-width: 1243px) {
+  .input-container {
+    width: 100%;
+    margin: 60px auto 0 auto;
+  }
+}
+
+.group {
+  position: relative;
+  margin-bottom: 30px;
+  width: 60%;
+}
+
+.group__input {
+  font-size: 24px;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.group__input_visibility {
+  display: none;
+}
+
+.group__input:focus {
+  outline: none;
+}
+
+.group__label {
+  color: #999;
+  font-size: 24px;
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.group__label_visibility {
+  display: none;
+}
+
+.group__input:focus ~ .group__label,
+.group__input:valid ~ .group__label {
+  top: -15px;
+  font-size: 18px;
+  color: #5264ae;
+}
+
+.group__bar {
+  position: relative;
+  display: block;
+  width: 50%;
+}
+.group__bar:before,
+.group__bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: #5264ae;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.group__bar:before {
+  left: 50%;
+}
+.group__bar:after {
+  right: 50%;
+}
+
+.group__input:focus ~ .group__bar:before,
+.group__input:focus ~ .group__bar:after {
+  width: 50%;
+}
+
+.user-container {
+  height: 100px;
+  text-align: center;
+}
+
+.user-container__info {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.error-message {
+  left: 44%;
+  position: absolute;
+  color: red;
+}
+
+@media screen and (max-width: 1243px) {
+  .error-message {
+    left: 22%;
+  }
+}
